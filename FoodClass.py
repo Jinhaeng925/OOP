@@ -5,7 +5,10 @@ class Customer:
         self.__address = address
         self.__email = email
         self.__phone = phone
-        self.__member_status = bool(member_status)
+        if (member_status == 'True'):
+            self.__member_status = True
+        else:
+            self.__member_status = False
 
     # Accessor method to get Customer ID
     def get_customerID(self):
@@ -40,17 +43,17 @@ class Transaction:
         self.__txCustomerID = customerid
 
     # Accessor method to get Transaction Date
-    def get_(self):
+    def get_txDate(self):
         return self.__txDate
 
     # Accessor method to get Transaction Item Name
-    def get_(self):
+    def get_txItemName(self):
         return self.__txItemName
 
     # Accessor method to get Transaction Cost
-    def get_(self):
+    def get_txCost(self):
         return self.__txCost
 
     # Accessor method to get Transaction Customer ID
-    def get_(self):
+    def get_txCustomerID(self):
         return self.__txCustomerID
